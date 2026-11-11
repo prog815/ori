@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Реестр организаторов распространения информации в сети «Интернет» (Роскомнадзор)</title>
+<meta name="description" content="Справочный снимок официальных данных Роскомнадзора. Реестр организаторов распространения информации (ОРИ) в сети «Интернет».">
+<link rel="icon" type="image/svg+xml" href="https://prog815.github.io/favicon.svg?v=1.0.0">
+<meta name="theme-color" content="#f5f7fb">
+
+<!-- JSON-LD микроразметка -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Реестр организаторов распространения информации в сети «Интернет»",
+  "description": "Справочный снимок открытых данных Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций",
+  "url": "https://prog815.github.io/ori/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Экосистема «Классик»",
+    "url": "https://prog815.github.io/"
+  },
+  "author": {
+    "@type": "Person",
+    "sameAs": [
+      "https://m.vk.ru/alekseyenin",
+      "https://t.me/AlekseyEnin",
+      "https://max.ru/channel_prog815",
+      "https://www.linkedin.com/in/eavprog/"
+    ]
+  }
+}
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(105817342, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105817342" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SM54ENZHYS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SM54ENZHYS');
+</script>
+<!-- /Google tag -->
+
+<!-- Общие ассеты хаба -->
+<script src="https://prog815.github.io/share.js?v=1.0.1" defer></script>
+
+<style>
+  :root{
+    --bg:#f5f7fb; --panel:#ffffff; --ink:#0f172a; --muted:#5b6b7f;
+    --line:#e2e8f0; --brand:#2563eb; --brand-d:#1d4ed8; --accent:#eff6ff;
+    --mark:#fef08a; --shadow:0 1px 2px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.06);
+    --radius:16px; --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --od:#7c3aed; --od-bg:#f3e8ff;
+  }
+  @media(prefers-color-scheme:dark){
+    :root{
+      --bg:#0b1120; --panel:#111a2c; --ink:#e6edf7; --muted:#94a3b8;
+      --line:#1e293b; --brand:#60a5fa; --brand-d:#3b82f6; --accent:rgba(96,165,250,.12);
+      --mark:#854d0e; --od:#a78bfa; --od-bg:rgba(167,139,250,.15);
+      --shadow:0 1px 2px rgba(0,0,0,.4);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  a{color:var(--brand); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 14px}
+
+  /* Баннер хаба */
+  .klassik-banner{display:block;max-width:1200px;margin:0 auto;padding:8px 16px;text-decoration:none;opacity:.9}
+  .klassik-banner:hover{opacity:1}
+  .klassik-banner img{display:block;width:100%;height:auto}
+
+  header.hero{padding:16px 0 6px}
+  h1{font-size:24px;margin:0 0 4px;letter-spacing:-.02em}
+  .sub{color:var(--muted);margin:0 0 12px;font-size:14px}
+
+  /* Панель поиска и фильтров */
+  .search-container{padding:12px 0 8px;}
+  .searchbar{display:flex; gap:8px; align-items:stretch; flex-wrap:wrap;}
+  .searchbar input[type=text]{
+    flex:1; min-width:200px; font-size:16px; padding:12px 16px;
+    border:1px solid var(--line); border-radius:var(--radius);
+    background:var(--panel); color:var(--ink); outline:none;
+    transition:border-color .2s;
+  }
+  .searchbar input[type=text]:focus{border-color:var(--brand); box-shadow:0 0 0 3px var(--accent)}
+  .searchbar select {
+    font-size:16px; padding:12px 16px; border:1px solid var(--line);
+    border-radius:var(--radius); background:var(--panel); color:var(--ink);
+    outline:none; cursor:pointer; max-width:240px;
+  }
+  .searchbar select:focus { border-color:var(--brand); }
+
+  .meta-line{
+    display:flex; justify-content:space-between; align-items:center;
+    margin:12px 2px 8px; font-size:13px; color:var(--muted);
+  }
+  .meta-line .count b{color:var(--ink)}
+  .meta-line .clear-link{color:var(--muted); text-decoration:underline dashed; cursor:pointer}
+  .meta-line .clear-link:hover{color:var(--brand)}
+
+  /* ---------- Загрузка: спиннер + анимация ---------- */
+  #status{
+    padding:48px 4px;
+    text-align:center;
+    color:var(--muted);
+    animation:fade-in .25s ease-out;
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #status .spinner{
+    width:46px; height:46px; border-radius:50%;
+    border:3px solid var(--line);
+    border-top-color:var(--brand);
+    margin:0 auto 16px;
+    animation:spin .85s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #status .loading-text{
+    font-size:15px; font-weight:500; color:var(--ink);
+    margin-bottom:6px;
+  }
+  #status .loading-text .dots span{
+    display:inline-block; opacity:0;
+    animation:dot-pulse 1.4s infinite;
+  }
+  #status .loading-text .dots span:nth-child(2){ animation-delay:.2s; }
+  #status .loading-text .dots span:nth-child(3){ animation-delay:.4s; }
+  @keyframes dot-pulse {
+    0%, 60%, 100% { opacity: 0; }
+    30% { opacity: 1; }
+  }
+  #status .substatus{
+    font-size:12px; color:var(--muted);
+    margin-top:4px;
+  }
+  #status .err{color:#e11d48; font-weight:500;}
+
+  #results{display:flex; flex-direction:column; gap:12px; padding-bottom:8px}
+
+  .card{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:var(--radius); padding:16px;
+    box-shadow:var(--shadow); position:relative;
+    transition:border-color .2s;
+  }
+  .card:hover{border-color:var(--brand)}
+  .card.highlight{border-color:var(--brand); box-shadow:0 0 0 2px var(--accent), var(--shadow)}
+
+  .row1{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px}
+
+  .id-badge{
+    font-family:var(--mono); font-size:12px; font-weight:600;
+    background:var(--accent); color:var(--brand-d);
+    border:1px solid var(--line); border-radius:6px;
+    padding:2px 8px; cursor:pointer;
+  }
+  .id-badge:hover{border-color:var(--brand)}
+
+  .status-badge {
+    font-size: 11px; font-weight: 600; border-radius: 999px; padding: 2px 10px; border: 1px solid transparent;
+  }
+  
+  /* Статусы entity_type */
+  .badge-entity-ru { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
+  .badge-entity-for { background: #f3e8ff; color: #6d28d9; border-color: #ddd6fe; }
+  .badge-entity-undef { background: #f1f5f9; color: #475569; border-color: #e2e8f0; }
+  
+  /* Бейдж ограничений */
+  .badge-limited { background: #fef2f2; color: #b91c1c; border-color: #fecaca; cursor: help; }
+  
+  /* Бейдж дублей */
+  .badge-dup { background: #ffedd5; color: #9a3412; border-color: #fed7aa; cursor: help; }
+
+  @media(prefers-color-scheme:dark){
+    .badge-entity-ru { background: rgba(22,101,52,.3); color: #86efac; border-color: rgba(22,101,52,.5); }
+    .badge-entity-for { background: rgba(109,40,217,.3); color: #c4b5fd; border-color: rgba(109,40,217,.5); }
+    .badge-entity-undef { background: rgba(71,85,105,.3); color: #cbd5e1; border-color: rgba(71,85,105,.5); }
+    .badge-limited { background: rgba(185,28,28,.3); color: #fca5a5; border-color: rgba(185,28,28,.5); }
+    .badge-dup { background: rgba(154,52,18,.3); color: #fdba74; border-color: rgba(154,52,18,.5); }
+  }
+
+  .name{
+    font-size:18px; font-weight:600; line-height:1.4; margin-bottom:2px; color:var(--ink);
+  }
+
+  .details-grid {
+    display: grid; grid-template-columns: 1fr; gap: 6px; font-size: 13px; margin-bottom: 12px; margin-top: 8px;
+  }
+  @media(min-width: 640px) {
+    .details-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .details-grid .lbl { color: var(--muted); }
+  .details-grid .val { font-weight: 500; }
+
+  .blocks-grid {
+    display: flex; flex-direction: column; gap: 12px; font-size: 13px; margin-bottom: 12px;
+    background: var(--accent); padding: 14px; border-radius: 8px; border: 1px solid var(--line);
+  }
+  .blocks-grid .lbl { color: var(--muted); margin-bottom: 4px; display: block; font-weight: 500;}
+  .blocks-grid .val { font-weight: 400; line-height: 1.5; }
+
+  /* Список сервисов */
+  .services-list { margin: 0; padding: 0 0 0 16px; font-size: 13px; }
+  .services-list li { margin-bottom: 12px; }
+  .services-list li:last-child { margin-bottom: 0; }
+  
+  .svc-domain { font-weight: 600; color: var(--ink); font-family: var(--mono); margin-bottom: 4px; }
+  .svc-desc { color: var(--muted); margin-bottom: 4px; }
+  .svc-email { font-size: 12px; }
+
+  .multiline { white-space: pre-line; }
+
+  mark { background:var(--mark); color:inherit; border-radius:2px; padding:0 1px; }
+
+  .actions{
+    display:flex; flex-wrap:wrap; align-items:center; gap:8px;
+    padding-top:12px; border-top:1px dashed var(--line);
+  }
+  .action-btn{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12px; font-weight:500; color:var(--muted);
+    background:transparent; border:1px solid transparent;
+    border-radius:6px; padding:4px 8px; cursor:pointer;
+    transition:all .2s; font-family:inherit;
+  }
+  .action-btn:hover{background:var(--accent); color:var(--brand-d); border-color:var(--accent)}
+
+  .share-slot{display:inline-flex}
+  .share-slot klassik-share { display: inline-flex; align-items: center; }
+
+  .more{
+    display:block; width:100%; margin:16px 0; padding:14px;
+    font-size:14px; font-weight:600; border:1px solid var(--line);
+    border-radius:var(--radius); background:var(--panel);
+    color:var(--brand); cursor:pointer;
+  }
+  .more:hover{border-color:var(--brand); background:var(--accent)}
+  .more[hidden]{display:none!important}
+
+  footer{margin:40px 0; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+  footer .stats{margin:0 0 4px; font-weight:500; color:var(--ink)}
+  footer .date-line{margin:0 0 16px; font-size:12px}
+  footer .links{display:flex; flex-direction:column; gap:12px}
+  footer .row-label{font-size:12px; color:var(--muted); margin-bottom:2px}
+  footer a{color:var(--brand)}
+
+  footer .disc{
+    font-size:12px; margin-top:16px; line-height:1.5;
+    background:var(--od-bg); border:1px solid rgba(124,58,237,.2);
+    border-radius:10px; padding:12px 14px; color:var(--ink);
+  }
+
+  .fab{
+    position:fixed; right:20px; width:44px; height:44px; border-radius:50%;
+    border:1px solid var(--line); background:var(--panel); color:var(--brand-d);
+    font-size:20px; cursor:pointer; box-shadow:var(--shadow);
+    display:none; align-items:center; justify-content:center; z-index:40;
+  }
+  .fab.up{bottom:80px} .fab.down{bottom:24px} .fab.show{display:flex}
+
+  .toast{
+    position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(20px);
+    background:var(--ink); color:var(--bg); padding:10px 16px; border-radius:99px;
+    font-size:13px; font-weight:500; opacity:0; pointer-events:none;
+    transition:opacity .2s, transform .2s; z-index:60;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+
+  .noscript-msg {
+    background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid #ffeeba;
+  }
+
+  @media(max-width:640px){
+    .klassik-banner{padding:4px 8px}
+    .wrap{padding:0 12px}
+    .name{font-size:16px}
+    .searchbar input[type=text] { width: 100%; max-width:none; }
+    .searchbar select { width: 100%; max-width:none; margin-top:8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Ссылка на центральный хаб -->
+<a class="klassik-banner" href="https://prog815.github.io/" title="На главную — все справочники">
+  <img src="https://prog815.github.io/banner.svg?v=1.0.0" alt="Экосистема «Классик» — все справочники">
+</a>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>Реестр организаторов распространения информации</h1>
+    <p class="sub">Сведения о юридических лицах и иностранных организациях, зарегистрированных в качестве организаторов распространения информации (Роскомнадзор).</p>
+  </header>
+
+  <noscript>
+    <div class="noscript-msg">
+      Для работы поиска и отображения карточек необходим JavaScript.
+      Вы можете ознакомиться с официальным первоисточником по ссылке в футере сайта.
+    </div>
+  </noscript>
+
+  <div class="search-container">
+    <div class="searchbar">
+      <input id="q" type="text" autocomplete="off" spellcheck="false"
+             placeholder="Поиск по названию, ИНН/ОГРН, домену, сервису..." title="Введите данные для поиска">
+      <select id="entity-filter" title="Фильтр по типу организации">
+        <option value="">Все типы</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="meta-line">
+    <div class="count" id="count">Загрузка...</div>
+    <div class="clear-link" id="clear-all" style="display:none" title="Сбросить поиск">Очистить</div>
+  </div>
+
+  <!-- Загрузка: спиннер + анимация -->
+  <div id="status">
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="loading-text">
+      <span id="loading-text">Загрузка реестра ОРИ</span><span class="dots"><span>.</span><span>.</span><span>.</span></span>
+    </div>
+    <div class="substatus">Файл ~120 КБ. Обычно 1–2 секунды.</div>
+  </div>
+
+  <div id="results"></div>
+
+  <button class="more" id="more" hidden>Показать ещё</button>
+
+  <footer>
+    <p class="stats" id="footstats">Справочный снимок реестра.</p>
+    <p class="date-line" id="footdate"></p>
+
+    <div class="links">
+      <div>
+        <div class="row-label">Источник данных (машиночитаемый снимок):</div>
+        <a href="https://data.gov.ru/datasets/63554e74-8a33-41db-9392-4aadca69a7b5" target="_blank" rel="noopener">data.gov.ru — Реестр организаторов распространения информации</a>
+      </div>
+      <div>
+        <div class="row-label">Первоисточники и текстовые редакции для сверки:</div>
+        <a href="https://rkn.gov.ru/opendata/7705846236-InformationDistributor/" target="_blank" rel="noopener">Набор данных на сайте Роскомнадзора</a> · 
+        <a href="https://rkn.gov.ru/" target="_blank" rel="noopener">Официальный сайт Роскомнадзора</a> ·
+        <a href="https://github.com/prog815/ori" target="_blank" rel="noopener" title="Исходный код и описание справочника">О справочнике</a>
+      </div>
+      <div>
+        <div class="row-label">Экосистема проектов:</div>
+        <a href="https://prog815.github.io/" target="_blank" rel="noopener">Центральный хаб «Классик»</a>
+      </div>
+      <div>
+        <div class="row-label">Обсуждение проекта и обратная связь:</div>
+        <a href="https://m.vk.ru/alekseyenin" target="_blank" rel="me noopener">ВКонтакте</a> ·
+        <a href="https://t.me/AlekseyEnin" target="_blank" rel="me noopener">Telegram</a> ·
+        <a href="https://max.ru/channel_prog815" target="_blank" rel="me noopener">MAX</a> ·
+        <a href="https://www.linkedin.com/in/eavprog/" target="_blank" rel="me noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <p class="disc">
+      Данные предоставляются как есть, на дату снимка. Не заменяет официальные публикации и правовые акты.<br><br>
+      В реестре встречаются записи без ИНН или ОГРН (иностранные организации). Для получения юридически значимой информации обращайтесь к первоисточнику (Роскомнадзор).
+    </p>
+  </footer>
+</div>
+
+<button class="fab up" id="fabUp" title="Прокрутить страницу наверх">↑</button>
+<button class="fab down" id="fabDown" title="Прокрутить страницу вниз">↓</button>
+<div class="toast" id="toast">Скопировано</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var PAGE = 20;
+  var DATA = [];
+  var META = null;
+  var activeDeepLinkCode = null;
+  var view = { list: [], shown: 0 };
+  var loadingInterval = null;
+
+  var els = {
+    q: document.getElementById('q'),
+    entityFilter: document.getElementById('entity-filter'),
+    clearAll: document.getElementById('clear-all'),
+    count: document.getElementById('count'),
+    status: document.getElementById('status'),
+    loadingText: document.getElementById('loading-text'),
+    results: document.getElementById('results'),
+    more: document.getElementById('more'),
+    footstats: document.getElementById('footstats'),
+    footdate: document.getElementById('footdate'),
+    fabUp: document.getElementById('fabUp'),
+    fabDown: document.getElementById('fabDown'),
+    toast: document.getElementById('toast')
+  };
+
+  var LOADING_PHASES = [
+    'Загрузка реестра ОРИ',
+    'Распаковка данных',
+    'Подготовка справочника'
+  ];
+  var loadingIdx = 0;
+
+  function startLoadingTicker() {
+    stopLoadingTicker();
+    loadingInterval = setInterval(function(){
+      if (!els.loadingText || !els.loadingText.isConnected) {
+        stopLoadingTicker();
+        return;
+      }
+      loadingIdx = (loadingIdx + 1) % LOADING_PHASES.length;
+      els.loadingText.textContent = LOADING_PHASES[loadingIdx];
+    }, 1500);
+  }
+  function stopLoadingTicker() {
+    if (loadingInterval) {
+      clearInterval(loadingInterval);
+      loadingInterval = null;
+    }
+  }
+
+  function esc(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  function escRe(s){ return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  function normName(s){ return String(s == null ? '' : s).toLowerCase().replace(/ё/g, 'е').replace(/\s+/g, ' ').trim(); }
+  function fmt(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+
+  function highlight(text, tokens) {
+    if (!tokens || !tokens.length || !text) return esc(text);
+    var html = esc(text);
+    for (var i=0; i<tokens.length; i++) {
+      var t = tokens[i];
+      if (!t) continue;
+      var re = new RegExp('(' + escRe(esc(t)) + ')', 'gi');
+      html = html.replace(re, '<mark>$1</mark>');
+    }
+    return html;
+  }
+
+  async function loadJsonGz(url){
+    var r = await fetch(url, { cache: 'no-cache' });
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    if(typeof DecompressionStream === 'undefined') throw new Error('DecompressionStream не поддерживается браузером');
+
+    var decompressed = r.body.pipeThrough(new DecompressionStream('gzip'));
+    var text = await new Response(decompressed).text();
+    return JSON.parse(text);
+  }
+
+  function syncCodeToUrl(code) {
+    var url = new URL(window.location);
+    if (code) url.searchParams.set('code', code);
+    else url.searchParams.delete('code');
+    history.replaceState(null, '', url.toString());
+  }
+
+  function clearCodeFromUrl() { syncCodeToUrl(null); }
+
+  function updateClearVisibility() {
+    var hasQuery = String(els.q.value || '').length > 0;
+    var hasEntity = String(els.entityFilter.value || '').length > 0;
+    var hasCode = !!activeDeepLinkCode;
+    els.clearAll.style.display = (hasQuery || hasEntity || hasCode) ? 'block' : 'none';
+  }
+
+  async function boot(){
+    try{
+      startLoadingTicker();
+
+      var base = location.pathname.replace(/index\.html$/, '');
+      if(base.charAt(base.length - 1) !== '/') base += '/';
+
+      var raw = await loadJsonGz(base + 'ori.json.gz');
+      META = await loadJsonGz(base + 'ori_meta.json.gz');
+
+      if(!Array.isArray(raw)) throw new Error('bad data shape');
+
+      // Маппинг 20 полей из тетрадки
+      DATA = raw.map(function(it) {
+        return {
+          id: String(it[0] || ''),
+          entryNum: String(it[1] || ''),
+          entryDate: String(it[2] || ''),
+          distributorName: String(it[3] || ''),
+          distributorOGRN: String(it[4] || ''),
+          distributorRegNo: String(it[5] || ''),
+          distributorINN: String(it[6] || ''),
+          distributorLegalAddress: String(it[7] || ''),
+          distributorPostAddress: String(it[8] || ''),
+          distributorEmail: String(it[9] || ''),
+          distributorPersons: String(it[10] || ''),
+          services: Array.isArray(it[11]) ? it[11] : [],
+          services_count: Number(it[12] || 0),
+          domains_all: String(it[13] || ''),
+          descriptions_all: String(it[14] || ''),
+          service_emails_all: String(it[15] || ''),
+          access_limited_any: Boolean(it[16]),
+          entity_type: String(it[17] || ''),
+          duplicates_in_source: Number(it[18] || 1),
+          source_order: Number(it[19] || 0)
+        };
+      });
+
+      if (META) {
+        els.footstats.textContent = 'В справочнике ' + fmt(META.records_count) + ' уникальных записей.';
+        els.footdate.textContent = META.change_display || '';
+        
+        // Заполняем фильтр типов динамически из meta
+        if (META.filter_decisions && META.filter_decisions.entity_type && META.filter_decisions.entity_type.values) {
+          var vals = META.filter_decisions.entity_type.values;
+          for (var j = 0; j < vals.length; j++) {
+            var opt = document.createElement('option');
+            opt.value = vals[j];
+            opt.textContent = vals[j];
+            els.entityFilter.appendChild(opt);
+          }
+        }
+      }
+
+      stopLoadingTicker();
+      els.status.style.display = 'none';
+
+      var urlParams = new URLSearchParams(window.location.search);
+      var codeParam = urlParams.get('code');
+      if (codeParam) {
+        var found = DATA.find(function(r) { return r.id === codeParam; });
+        if (found) {
+          activeDeepLinkCode = codeParam;
+        } else {
+          els.q.value = codeParam;
+        }
+      }
+
+      runSearch();
+    }catch(err){
+      console.error(err);
+      stopLoadingTicker();
+      els.status.innerHTML = '<div class="err">Ошибка загрузки: ' + esc(err.message) + '</div>' +
+        '<div style="margin-top:12px"><button class="action-btn" onclick="location.reload()">Повторить</button></div>';
+    }
+  }
+
+  function runSearch(){
+    if (activeDeepLinkCode) {
+      var one = DATA.find(function(r){ return r.id === activeDeepLinkCode; });
+      view.list = one ? [one] : [];
+      view.shown = 0;
+      els.results.innerHTML = '';
+      renderCount();
+      renderMore();
+      appendPage();
+      updateClearVisibility();
+      return;
+    }
+
+    var query = normName(els.q.value);
+    var tokens = query.split(' ').filter(Boolean);
+    var entityVal = els.entityFilter.value;
+
+    view.list = DATA.filter(function(r){
+      // Фильтр по типу организации (жёсткое совпадение)
+      if (entityVal && r.entity_type !== entityVal) return false;
+
+      // Текстовый поиск (AND по токенам)
+      if (tokens.length > 0) {
+        var blob = normName(
+          r.id + ' ' + r.entryNum + ' ' + r.entryDate + ' ' + 
+          r.distributorName + ' ' + r.distributorOGRN + ' ' + r.distributorRegNo + ' ' + 
+          r.distributorINN + ' ' + r.distributorLegalAddress + ' ' + r.distributorPostAddress + ' ' + 
+          r.distributorEmail + ' ' + r.distributorPersons + ' ' + 
+          r.domains_all + ' ' + r.descriptions_all + ' ' + r.service_emails_all
+        );
+        for(var i=0; i<tokens.length; i++){
+          if(blob.indexOf(tokens[i]) === -1) return false;
+        }
+      }
+      return true;
+    });
+
+    view.shown = 0;
+    els.results.innerHTML = '';
+    renderCount();
+    renderMore();
+    appendPage();
+    updateClearVisibility();
+  }
+
+  function renderCount(){
+    var total = view.list.length;
+    var shown = Math.min(view.shown, total);
+    els.count.innerHTML = 'Найдено: <b>' + fmt(total) + '</b> · Показано: <b>' + fmt(shown) + '</b>';
+  }
+
+  function renderMore(){
+    var total = view.list.length;
+    var shown = Math.min(view.shown, total);
+    if(shown >= total || total === 0){
+      els.more.hidden = true;
+    } else {
+      els.more.hidden = false;
+      els.more.textContent = 'Показать ещё +' + PAGE + ' (показано ' + fmt(shown) + ' из ' + fmt(total) + ')';
+    }
+  }
+
+  function appendPage(){
+    var total = view.list.length;
+    if(total === 0){
+      if (activeDeepLinkCode) {
+        els.results.innerHTML = '<div style="padding:32px 4px;text-align:center;color:var(--muted)">Карточка по ссылке не найдена. Возможно, запись удалена из реестра.<br><br>Нажмите «Очистить», чтобы увидеть весь реестр.</div>';
+      } else {
+        els.results.innerHTML = '<div style="padding:32px 4px;text-align:center;color:var(--muted)">Ничего не найдено. Попробуйте изменить запрос.</div>';
+      }
+      renderCount(); renderMore(); return;
+    }
+
+    var end = Math.min(view.shown + PAGE, total);
+    var html = [];
+    var queryTokens = els.q.value.trim().split(/\s+/).filter(Boolean);
+
+    for(var i=view.shown; i<end; i++){
+      html.push(cardHTML(view.list[i], queryTokens));
+    }
+    els.results.insertAdjacentHTML('beforeend', html.join(''));
+
+    bindShareButtons();
+
+    view.shown = end;
+    renderCount();
+    renderMore();
+  }
+
+  function bindShareButtons() {
+    if (!window.customElements || !customElements.get('klassik-share')) {
+      return;
+    }
+    var slots = els.results.querySelectorAll('.share-slot');
+    for (var j=0; j<slots.length; j++) {
+      var fallback = slots[j].querySelector('.btn-share-fallback');
+      if (!fallback) continue;
+
+      var id = slots[j].getAttribute('data-id');
+      var nameText = slots[j].getAttribute('data-name');
+      var url = window.location.origin + window.location.pathname + '?code=' + id;
+
+      var el = document.createElement('klassik-share');
+      el.setAttribute('catalog', 'ori');
+      el.setAttribute('title', 'Реестр ОРИ (Роскомнадзор)');
+      el.setAttribute('text', nameText);
+      el.setAttribute('url', url);
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'action-btn';
+      btn.title = 'Поделиться этой записью';
+      btn.setAttribute('aria-label', 'Поделиться записью');
+      btn.textContent = '📤 Поделиться';
+
+      el.appendChild(btn);
+      slots[j].replaceChild(el, fallback);
+    }
+  }
+
+  if (window.customElements) {
+    customElements.whenDefined('klassik-share').then(bindShareButtons);
+  }
+
+  function cardHTML(r, queryTokens){
+    var isHighlight = (r.id === activeDeepLinkCode);
+    var idHtml = highlight(r.id, queryTokens);
+    
+    // Заголовок: Наименование распространителя
+    var cardTitle = r.distributorName || 'Без названия';
+    var titleHtml = highlight(cardTitle, queryTokens);
+
+    // Бейдж типа организации
+    var entityCls = 'badge-entity-undef';
+    if (r.entity_type === 'Российское ЮЛ/ИП') entityCls = 'badge-entity-ru';
+    else if (r.entity_type === 'Иностранное лицо') entityCls = 'badge-entity-for';
+    var entityBadge = '<span class="status-badge ' + entityCls + '">' + esc(r.entity_type || 'Не определено') + '</span>';
+    
+    // Бейдж ограничений
+    var limitedBadge = r.access_limited_any ? '<span class="status-badge badge-limited" title="Один или несколько сервисов имеют ограничения доступа">⚠ Доступ ограничен</span>' : '';
+    
+    // Бейдж дублей
+    var dupBadge = '';
+    if (r.duplicates_in_source > 1) {
+       dupBadge = '<span class="status-badge badge-dup" title="В исходном наборе данных эта запись встречается несколько раз">⚠ В источнике: ' + r.duplicates_in_source + ' дубля</span>';
+    }
+
+    // Копирование всех 20 полей (сервисы сериализуем в JSON для надежности)
+    var copyStr = [
+      r.id, r.entryNum, r.entryDate, r.distributorName,
+      r.distributorOGRN, r.distributorRegNo, r.distributorINN,
+      r.distributorLegalAddress, r.distributorPostAddress,
+      r.distributorEmail, r.distributorPersons,
+      JSON.stringify(r.services),
+      r.services_count, r.domains_all, r.descriptions_all, r.service_emails_all,
+      r.access_limited_any, r.entity_type, r.duplicates_in_source, r.source_order
+    ].join('; ');
+
+    // Детали
+    var details = [];
+    
+    if (r.entryNum) details.push('<div><span class="lbl">Номер записи:</span> <span class="val">' + highlight(r.entryNum, queryTokens) + '</span></div>');
+    if (r.entryDate) details.push('<div><span class="lbl">Дата включения:</span> <span class="val">' + highlight(r.entryDate, queryTokens) + '</span></div>');
+
+    // Реквизиты
+    if (r.distributorOGRN) details.push('<div><span class="lbl">ОГРН:</span> <span class="val">' + highlight(r.distributorOGRN, queryTokens) + '</span></div>');
+    if (r.distributorRegNo) details.push('<div><span class="lbl">Идентификатор:</span> <span class="val">' + highlight(r.distributorRegNo, queryTokens) + '</span></div>');
+    if (r.distributorINN) details.push('<div><span class="lbl">ИНН:</span> <span class="val">' + highlight(r.distributorINN, queryTokens) + '</span></div>');
+
+    if (r.distributorPersons) details.push('<div><span class="lbl">Представитель:</span> <span class="val">' + highlight(r.distributorPersons, queryTokens) + '</span></div>');
+
+    // Блок с адресами, email и сервисами
+    var extraBlocks = '';
+    if (r.distributorLegalAddress || r.distributorPostAddress || r.distributorEmail || r.services_count > 0) {
+        extraBlocks = '<div class="blocks-grid">';
+        
+        if (r.distributorLegalAddress) {
+            extraBlocks += '<div><span class="lbl">Юридический адрес:</span> <div class="val multiline">' + highlight(r.distributorLegalAddress, queryTokens) + '</div></div>';
+        }
+        if (r.distributorPostAddress) {
+            extraBlocks += '<div><span class="lbl">Почтовый адрес:</span> <div class="val multiline">' + highlight(r.distributorPostAddress, queryTokens) + '</div></div>';
+        }
+        if (r.distributorEmail) {
+            var emails = r.distributorEmail.split('\n').map(function(e) { return '<a href="mailto:' + esc(e.trim()) + '">' + esc(e.trim()) + '</a>'; }).join('<br>');
+            extraBlocks += '<div><span class="lbl">Электронная почта:</span> <div class="val multiline">' + emails + '</div></div>';
+        }
+
+        if (r.services_count > 0) {
+            extraBlocks += '<div><span class="lbl">Сервисы (' + r.services_count + '):</span>';
+            extraBlocks += '<ul class="services-list">';
+            for(var k=0; k<r.services.length; k++) {
+                var svc = r.services[k];
+                var sDomain = svc[0] ? highlight(svc[0], queryTokens).replace(/\n/g, '<br>') : '—';
+                var sDesc = svc[1] ? highlight(svc[1], queryTokens) : '';
+                var sEmail = svc[2] ? '<a href="mailto:' + esc(svc[2]) + '">' + esc(svc[2]) + '</a>' : '';
+                var sLimit = svc[3] ? '<span style="color:#b91c1c; font-size:11px; font-weight:600;"> (Ограничен)</span>' : '';
+
+                extraBlocks += '<li>';
+                extraBlocks += '<div class="svc-domain">' + sDomain + sLimit + '</div>';
+                if (sDesc) extraBlocks += '<div class="svc-desc multiline">' + sDesc + '</div>';
+                if (sEmail) extraBlocks += '<div class="svc-email">' + sEmail + '</div>';
+                extraBlocks += '</li>';
+            }
+            extraBlocks += '</ul></div>';
+        }
+        
+        extraBlocks += '</div>';
+    }
+
+    return '<article class="card' + (isHighlight ? ' highlight' : '') + '" title="Карточка ОРИ: ' + esc(cardTitle) + '">' +
+      '<div class="row1">' +
+        '<span class="id-badge" data-copy="' + r.id + '" title="Уникальный ID записи. Кликните, чтобы скопировать">' + idHtml + '</span>' +
+        entityBadge +
+        limitedBadge +
+        dupBadge +
+      '</div>' +
+      '<div class="name">' + titleHtml + '</div>' +
+      '<div class="details-grid">' + details.join('') + '</div>' +
+      extraBlocks +
+      '<div class="actions">' +
+        '<button type="button" class="action-btn btn-copy-row" data-str="' + esc(copyStr) + '" title="Скопировать все данные одной строкой" aria-label="Скопировать строку с данными">📋 строка</button>' +
+        '<div class="share-slot" data-id="' + r.id + '" data-name="' + esc(cardTitle) + '">' +
+          '<button type="button" class="action-btn btn-share-fallback" data-id="' + r.id + '" data-name="' + esc(cardTitle) + '" title="Поделиться этой записью" aria-label="Поделиться записью">📤 Поделиться</button>' +
+        '</div>' +
+      '</div>' +
+    '</article>';
+  }
+
+  var debTimer = null;
+  els.q.addEventListener('input', function(){
+    activeDeepLinkCode = null;
+    clearCodeFromUrl();
+    clearTimeout(debTimer);
+    debTimer = setTimeout(runSearch, 180);
+  });
+
+  els.entityFilter.addEventListener('change', function(){
+    activeDeepLinkCode = null;
+    clearCodeFromUrl();
+    runSearch();
+  });
+
+  function clearAllAction() {
+    els.q.value = '';
+    els.entityFilter.value = '';
+    activeDeepLinkCode = null;
+    clearCodeFromUrl();
+    runSearch();
+    els.q.focus();
+  }
+
+  els.clearAll.addEventListener('click', clearAllAction);
+  els.more.addEventListener('click', appendPage);
+
+  els.results.addEventListener('click', function(ev){
+    var idBadge = ev.target.closest('.id-badge');
+    if(idBadge) {
+      var copyVal = idBadge.getAttribute('data-copy');
+      if (copyVal) {
+        navigator.clipboard.writeText(copyVal).then(function(){
+          showToast('Скопировано: ' + copyVal);
+          try { if (window.ym) window.ym(105817342, 'reachGoal', 'ori_copy_id'); } catch (e) {}
+          try { if (window.gtag) window.gtag('event', 'copy_id', { id: copyVal }); } catch (e) {}
+        });
+        return;
+      }
+    }
+
+    var btnCopy = ev.target.closest('.btn-copy-row');
+    if(btnCopy) {
+      var text = btnCopy.getAttribute('data-str');
+      navigator.clipboard.writeText(text).then(function(){
+        showToast('Строка скопирована');
+        try { if (window.ym) window.ym(105817342, 'reachGoal', 'ori_copy_row'); } catch (e) {}
+        try { if (window.gtag) window.gtag('event', 'copy_row'); } catch (e) {}
+      });
+      return;
+    }
+
+    var btnShare = ev.target.closest('.btn-share-fallback');
+    if(btnShare) {
+      var id = btnShare.getAttribute('data-id');
+      var name = btnShare.getAttribute('data-name');
+      var url = window.location.origin + window.location.pathname + '?code=' + id;
+      var shareText = name + '\nКод: ' + id + '\n' + url;
+
+      if (navigator.share) {
+        navigator.share({
+          title: 'Реестр ОРИ (Роскомнадзор)',
+          text: name,
+          url: url
+        }).catch(console.error);
+      } else {
+        navigator.clipboard.writeText(shareText).then(function(){
+          showToast('Ссылка скопирована');
+        });
+      }
+
+      try { if (window.ym) window.ym(105817342, 'reachGoal', 'ori_share_fallback'); } catch (e) {}
+      try { if (window.gtag) window.gtag('event', 'share_fallback'); } catch (e) {}
+
+      return;
+    }
+  });
+
+  var toastTimer = null;
+  function showToast(msg){
+    els.toast.textContent = msg;
+    els.toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ els.toast.classList.remove('show'); }, 1800);
+  }
+
+  function onScroll(){
+    var y = window.scrollY || document.documentElement.scrollTop;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    els.fabUp.classList.toggle('show', y > 300);
+    els.fabDown.classList.toggle('show', y > 300 && y < max - 40);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  els.fabUp.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  els.fabDown.addEventListener('click', function(){ window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); });
+
+  boot();
+})();
+</script>
+</body>
+</html>
